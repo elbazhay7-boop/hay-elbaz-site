@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>חי חיים אלבז | יועץ נדל״ן פרטי ומסחרי — אזור הקריות והסביבה</title>
+<meta name="description" content="ליווי אישי, שקוף ומתועד למוכרי נכסים באזור הקריות והסביבה — מהערכת שווי ועד מסירת המפתח.">
+
+<!--
+  === מקומות עריכה מהירים ===
+  1. מספר הטלפון/וואטסאפ (054-4626165) כבר מוזן בכל הכפתורים באתר. לשינוי — חפש "972544626165" (וואטסאפ) ו-"0544626165" (חיוג)
+  2. אימייל (elbazhay7@gmail.com) כבר מוזן בפוטר
+  3. המלצות לקוחות: בסקשן #testimonials יש שלושה "משבצות" ריקות מוכנות למילוי
+  4. תמונת פרופיל: בהדר ובסקשן הפתיחה יש מעגל ראשי תיבות — אפשר להחליף ב-<img> אמיתי
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;500;600;700&family=Heebo:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink: #101B26;
+    --ink-2: #172433;
+    --ink-3: #1E3038;
+    --teal: #24494C;
+    --paper: #EDE7D9;
+    --paper-2: #F5F1E7;
+    --brass: #C6A15B;
+    --brass-dim: #8E7440;
+    --brick: #A6402C;
+    --text-dark: #1B2430;
+    --text-muted: #5C6773;
+    --text-on-ink: #E7E2D3;
+    --text-on-ink-muted: #9AA6AE;
+    --radius: 14px;
+    --shadow: 0 20px 50px -20px rgba(10,16,24,0.45);
+    --serif: 'Frank Ruhl Libre', serif;
+    --sans: 'Assistant', sans-serif;
+    --label: 'Heebo', sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: var(--sans);
+    background: var(--paper-2);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family: var(--serif); font-weight:700; line-height:1.15; letter-spacing:-0.01em;}
+  .container{max-width:1180px; margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family: var(--label);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    color: var(--brass);
+    display:flex; align-items:center; gap:10px;
+    text-transform: none;
+    margin-bottom: 18px;
+  }
+  .eyebrow::before{content:""; width:26px; height:1.5px; background: var(--brass);}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family: var(--sans); font-weight:700; font-size:16px;
+    padding: 15px 26px; border-radius: 10px;
+    border: none; cursor:pointer;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .btn:focus-visible{outline: 3px solid var(--brass); outline-offset: 3px;}
+  .btn-primary{ background: var(--brass); color: var(--ink); box-shadow: 0 12px 30px -10px rgba(198,161,91,0.55);}
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 16px 36px -10px rgba(198,161,91,0.7);}
+  .btn-ghost{ background: transparent; color: var(--text-on-ink); border: 1.5px solid rgba(231,226,211,0.35); }
+  .btn-ghost:hover{ border-color: var(--brass); color: var(--brass); }
+  .btn svg{width:18px; height:18px; flex-shrink:0;}
+
+  /* ---------- Header ---------- */
+  header{
+    position: sticky; top:0; z-index: 100;
+    padding: 18px 0;
+    transition: background .35s ease, box-shadow .35s ease, padding .35s ease;
+  }
+  header .container{display:flex; align-items:center; justify-content:space-between; gap:20px;}
+  header.solid{ background: rgba(16,27,38,0.92); backdrop-filter: blur(10px); box-shadow: 0 8px 24px -12px rgba(0,0,0,0.4); padding: 12px 0;}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand-mark{
+    width:44px; height:44px; border-radius:50%;
+    border: 1.5px solid var(--brass);
+    display:flex; align-items:center; justify-content:center;
+    overflow:hidden; flex-shrink:0; background: var(--ink-2);
+  }
+  .brand-mark img{ width:100%; height:100%; object-fit:cover; }
+  .brand-text{display:flex; flex-direction:column; line-height:1.2;}
+  .brand-name{font-family: var(--serif); font-weight:700; font-size:17px; color: var(--text-on-ink);}
+  .brand-sub{font-family: var(--label); font-size:11px; letter-spacing:0.08em; color: var(--text-on-ink-muted);}
+  nav{display:flex; align-items:center; gap:32px;}
+  nav a{
+    font-family: var(--label); font-size:14.5px; color: var(--text-on-ink-muted);
+    text-decoration:none; transition: color .2s ease;
+  }
+  nav a:hover{color: var(--brass);}
+  .header-actions{display:flex; align-items:center; gap:12px;}
+  .icon-btn{
+    width:42px; height:42px; border-radius:50%; flex-shrink:0;
+    border: 1.5px solid rgba(231,226,211,0.35); color: var(--text-on-ink);
+    display:flex; align-items:center; justify-content:center;
+    transition: border-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .icon-btn svg{ width:18px; height:18px; }
+  .icon-btn:hover{ border-color: var(--brass); color: var(--brass); transform: translateY(-2px); }
+
+  .inline-wa{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family: var(--label); font-size:14px; color: var(--brass);
+    text-decoration:none; border-bottom: 1px dashed var(--brass-dim); padding-bottom:3px;
+    transition: color .2s ease;
+  }
+  .inline-wa svg{ width:16px; height:16px; }
+  .inline-wa:hover{ color: var(--brick); }
+
+  .trust-badges{ display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; }
+  .trust-badges span{ display:flex; align-items:center; gap:6px; font-family: var(--label); font-size:12px; color: var(--text-on-ink-muted); }
+  .trust-badges svg{ width:14px; height:14px; color: var(--brass); flex-shrink:0; }
+
+  .luxury-band{ background: linear-gradient(120deg, #0B0F14, #241B0C 130%); border: 1px solid rgba(198,161,91,0.35); }
+  .inheritance-band{ background: linear-gradient(120deg, var(--ink-3), var(--ink-2)); }
+
+  .mobile-bar{
+    position: fixed; bottom:0; left:0; right:0; z-index: 210;
+    display:none; gap:10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: var(--ink); box-shadow: 0 -10px 24px -10px rgba(0,0,0,0.5);
+  }
+  .mobile-bar-btn{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    padding: 13px 10px; border-radius:10px; font-family: var(--sans); font-weight:700; font-size:14.5px;
+    text-decoration:none;
+  }
+  .mobile-bar-btn svg{ width:18px; height:18px; }
+  .mobile-bar-btn.call{ border: 1.5px solid var(--brass); color: var(--text-on-ink); }
+  .mobile-bar-btn.wa{ background:#25D366; color:#fff; }
+  @media (max-width: 640px){
+    .mobile-bar{ display:flex; }
+    body{ padding-bottom: 78px; }
+  }
+
+  @media (max-width:860px){
+    nav{display:none;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background: radial-gradient(120% 100% at 20% 0%, var(--teal) 0%, var(--ink-2) 45%, var(--ink) 100%);
+    color: var(--text-on-ink);
+    padding: 70px 0 120px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    position:relative; z-index:2;
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:50px; align-items:center;
+  }
+  .hero-byline{ display:flex; align-items:center; gap:14px; margin-bottom:26px; }
+  .hero-byline img{
+    width:60px; height:60px; border-radius:50%; object-fit:cover;
+    border: 1.5px solid var(--brass); flex-shrink:0;
+  }
+  .hero-byline .name{ display:block; font-family: var(--serif); font-weight:700; font-size:17px; color: var(--text-on-ink); }
+  .hero-byline .role{ display:block; font-family: var(--label); font-size:12.5px; color: var(--text-on-ink-muted); margin-top:2px; }
+
+  .hero h1{ font-size: clamp(34px, 4.6vw, 54px); color: var(--text-on-ink); margin-bottom:22px; }
+  .hero h1 em{ font-style:normal; color: var(--brass); }
+  .hero p.lead{ font-size:18px; color: var(--text-on-ink-muted); max-width:520px; margin-bottom:34px; }
+
+  .route-svg{ position:absolute; inset:0; width:100%; height:100%; opacity:0.9; z-index:1; pointer-events:none; }
+  .route-path{ fill:none; stroke: var(--brass); stroke-width:2; stroke-linecap:round; stroke-dasharray: 1500; stroke-dashoffset:1500; opacity:0.65;}
+  .route-path.animate{ animation: draw 2.4s cubic-bezier(.3,.8,.4,1) forwards; }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  .route-pin{ opacity:0; transform-origin:center; transform: scale(.4); }
+  .route-pin.animate{ animation: pinpop .6s cubic-bezier(.34,1.56,.64,1) forwards; }
+  @keyframes pinpop{ to{ opacity:1; transform:scale(1);} }
+  .route-label{ font-family:'Heebo',sans-serif; font-size:12.5px; letter-spacing:0.03em; fill: var(--text-on-ink-muted); opacity:0; }
+  .route-label.animate{ animation: labelfade .6s ease forwards; }
+  @keyframes labelfade{ to{opacity:1;} }
+
+  /* lead form */
+  .lead-card{
+    position:relative; z-index:2;
+    background: rgba(237,231,217,0.06);
+    border: 1px solid rgba(198,161,91,0.28);
+    backdrop-filter: blur(6px);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+  }
+  .lead-card h3{ font-size:20px; color:var(--text-on-ink); margin-bottom:6px; font-weight:700;}
+  .lead-card .hint{ font-family: var(--label); font-size:13px; color: var(--text-on-ink-muted); margin-bottom:20px; }
+  .field{ margin-bottom:14px; }
+  .field label{ display:block; font-family: var(--label); font-size:12.5px; color: var(--text-on-ink-muted); margin-bottom:6px; letter-spacing:0.03em;}
+  .field input, .field select{
+    width:100%; padding:13px 14px; border-radius:9px;
+    border: 1px solid rgba(231,226,211,0.25);
+    background: rgba(16,27,38,0.5); color: var(--text-on-ink);
+    font-family: var(--sans); font-size:15px;
+  }
+  .field input::placeholder{ color: rgba(154,166,174,0.6); }
+  .field input:focus, .field select:focus{ outline: 2px solid var(--brass); outline-offset:1px; border-color:transparent;}
+  .lead-card .btn-primary{ width:100%; justify-content:center; margin-top:6px;}
+  .lead-note{ font-family: var(--label); font-size:12px; color: var(--text-on-ink-muted); margin-top:14px; text-align:center; }
+  .form-msg{ font-family: var(--label); font-size:13px; margin-top:12px; text-align:center; display:none; }
+  .form-msg.show{ display:block; }
+
+  /* ---------- Section shells ---------- */
+  section{ padding: 90px 0; }
+  .section-paper{ background: var(--paper-2); }
+  .section-ink{ background: var(--ink); color: var(--text-on-ink); }
+  .section-head{ max-width: 640px; margin-bottom: 52px; }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+  .section-head h2{ font-size: clamp(26px, 3.4vw, 38px); }
+  .section-ink .section-head h2{ color: var(--text-on-ink); }
+  .section-head p{ color: var(--text-muted); font-size:17px; margin-top:14px; }
+  .section-ink .section-head p{ color: var(--text-on-ink-muted); }
+
+  .reveal{ opacity:0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in{ opacity:1; transform: translateY(0); }
+
+  /* divider */
+  .route-divider{ display:flex; align-items:center; justify-content:center; gap:14px; margin: 0 0 60px; opacity:0.55;}
+  .route-divider .line{ height:1px; width:70px; background: linear-gradient(90deg, transparent, var(--brass)); }
+  .route-divider .line.rev{ background: linear-gradient(90deg, var(--brass), transparent); }
+  .route-divider svg{ width:16px; height:16px; }
+
+  /* ---------- Value chips (specializations) ---------- */
+  .chip-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap:16px; }
+  .chip{
+    background: var(--paper); border: 1px solid rgba(142,116,64,0.22);
+    border-radius: 12px; padding: 20px 20px;
+    display:flex; align-items:flex-start; gap:14px;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .chip:hover{ transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--brass); }
+  .chip .num{ font-family: var(--label); font-size:12px; color: var(--brass-dim); flex-shrink:0; padding-top:2px; }
+  .chip .txt{ font-size:15.5px; font-weight:600; color: var(--text-dark); }
+
+  /* ---------- Values (dark cards) ---------- */
+  .value-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:20px; }
+  .value-card{
+    background: var(--ink-2); border:1px solid rgba(198,161,91,0.16);
+    border-radius: var(--radius); padding: 30px 26px;
+    transition: transform .25s ease, border-color .25s ease;
+  }
+  .value-card:hover{ transform: translateY(-4px); border-color: var(--brass); }
+  .value-card .icon{ width:42px; height:42px; margin-bottom:18px; color: var(--brass); }
+  .value-card h3{ font-size:18px; color: var(--text-on-ink); margin-bottom:8px; font-family:var(--sans); font-weight:700;}
+  .value-card p{ font-size:14.5px; color: var(--text-on-ink-muted); }
+
+  /* ---------- Map / areas section ---------- */
+  .map-wrap{
+    background: var(--ink); border-radius: 20px; padding: 40px;
+    position:relative; overflow:hidden;
+  }
+  .map-svg{ width:100%; height:auto; display:block; }
+  .area-list{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; justify-content:center; }
+  .area-pill{
+    font-family: var(--label); font-size:13.5px; color: var(--text-on-ink);
+    border: 1px solid rgba(198,161,91,0.35); padding:8px 16px; border-radius:999px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .area-pill .dot{ width:6px; height:6px; border-radius:50%; background: var(--brass); }
+
+  /* ---------- Process ---------- */
+  .process{ position:relative; max-width:760px; margin:0 auto; }
+  .process::before{
+    content:""; position:absolute; top:8px; bottom:8px; right:27px;
+    width:1.5px; background: linear-gradient(180deg, var(--brass), rgba(198,161,91,0.1));
+  }
+  .step{ position:relative; padding-right: 76px; margin-bottom:38px; }
+  .step:last-child{ margin-bottom:0; }
+  .step-num{
+    position:absolute; right:0; top:0; width:56px; height:56px; border-radius:50%;
+    border: 1.5px solid var(--brass); background: var(--paper-2);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--serif); font-weight:700; font-size:19px; color: var(--brass-dim);
+  }
+  .step h3{ font-size:19px; margin-bottom:6px; font-family:var(--sans); font-weight:700; color:var(--text-dark);}
+  .step p{ color: var(--text-muted); font-size:15px; max-width:520px; }
+  .process-note{
+    margin-top: 40px; padding: 18px 22px; border-radius: 12px;
+    background: var(--paper); border: 1px dashed var(--brass-dim);
+    font-size:14.5px; color: var(--text-muted); display:flex; gap:12px; align-items:flex-start;
+  }
+  .process-note svg{ width:20px; height:20px; flex-shrink:0; color: var(--brass-dim); margin-top:1px;}
+
+  /* ---------- Cinematic video section ---------- */
+  .video-frame{
+    position:relative; border-radius: 22px; overflow:hidden;
+    height: 62vh; min-height:420px; max-height:640px;
+    background: var(--ink);
+  }
+  .video-frame .video-fallback{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;
+  }
+  .video-fallback svg{
+    position:absolute; top:-6%; left:-6%; width:112%; height:112%;
+    animation: kenburns 22s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns{ from{ transform: scale(1) translate(0,0); } to{ transform: scale(1.1) translate(-1.5%,-1%); } }
+
+  /* blurred ambient backdrop copy of the video, fills the whole wide frame */
+  .video-bg{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2;
+    filter: blur(38px) brightness(0.55) saturate(1.1);
+    transform: scale(1.15);
+  }
+  /* sharp foreground copy, centered and fully visible (no cropping) */
+  .video-fg{
+    position:absolute; top:50%; left:50%; transform: translate(-50%,-50%);
+    height: 100%; width:auto; max-width:100%; z-index:3;
+    border-radius: 16px; box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6);
+  }
+
+  .video-frame::after{
+    content:""; position:absolute; inset:0; z-index:4; pointer-events:none;
+    background: linear-gradient(180deg, rgba(16,27,38,0.05) 0%, rgba(16,27,38,0.35) 55%, rgba(16,27,38,0.9) 100%);
+  }
+  .video-overlay{
+    position:absolute; inset:0; z-index:5;
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+    text-align:center; padding: 44px; color: var(--text-on-ink);
+  }
+  .video-overlay .eyebrow{ justify-content:center; }
+  .video-overlay h2{ color: var(--text-on-ink); font-size: clamp(24px,3vw,34px); margin-bottom:10px; }
+  .video-overlay p{ color: var(--text-on-ink-muted); max-width:480px; margin-bottom:22px; font-size:15px; }
+  @media (max-width:700px){
+    .video-frame{ height:72vh; }
+    .video-fg{ width:100%; height:auto; max-height:100%; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .video-fallback svg{ animation: none; }
+  }
+  .channel-row{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .channel{
+    font-family: var(--label); font-size:13.5px; color: var(--text-on-ink-muted);
+    border:1px solid rgba(231,226,211,0.18); padding:10px 18px; border-radius:999px;
+    transition: border-color .2s ease, color .2s ease;
+  }
+  a.channel:hover{ border-color: var(--brass); color: var(--brass); }
+
+  /* ---------- Commercial banner ---------- */
+  .commercial{
+    background: linear-gradient(120deg, var(--ink-3), var(--teal));
+    border-radius: 20px; padding: 44px; color: var(--text-on-ink);
+    display:grid; grid-template-columns: 1.3fr auto; gap:30px; align-items:center;
+  }
+  .commercial h3{ font-size:23px; margin-bottom:10px; color:var(--text-on-ink); }
+  .commercial p{ color: var(--text-on-ink-muted); font-size:15px; max-width:520px;}
+  .commercial-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .commercial-tags span{ font-family:var(--label); font-size:12.5px; background:rgba(198,161,91,0.14); color:var(--brass); padding:6px 12px; border-radius:999px;}
+
+  /* ---------- Testimonials (placeholder slots) ---------- */
+  .test-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
+  .test-slot{
+    border: 1.5px dashed rgba(198,161,91,0.4); border-radius: var(--radius);
+    padding: 30px 24px; text-align:center; color: var(--text-on-ink-muted);
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+  }
+  .test-slot svg{ width:26px; height:26px; color: var(--brass); opacity:0.8;}
+  .test-slot .small{ font-family: var(--label); font-size:12.5px; }
+
+  /* ---------- Final CTA ---------- */
+  .cta-band{
+    background: radial-gradient(120% 140% at 80% 20%, var(--teal), var(--ink) 60%);
+    color: var(--text-on-ink); border-radius: 24px; padding: 60px 44px;
+    display:grid; grid-template-columns: 1fr 0.9fr; gap:40px; align-items:center;
+    position:relative; overflow:hidden;
+  }
+  .cta-band h2{ font-size: clamp(26px,3.2vw,36px); color: var(--text-on-ink); margin-bottom:14px;}
+  .cta-band p{ color: var(--text-on-ink-muted); font-size:16px; max-width:460px;}
+  .cta-band .lead-card{ background: rgba(16,27,38,0.55); }
+
+  /* ---------- Footer ---------- */
+  footer{ background: var(--ink); color: var(--text-on-ink-muted); padding: 50px 0 30px; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:30px; padding-bottom:30px; border-bottom:1px solid rgba(231,226,211,0.12); margin-bottom:24px;}
+  .footer-col h4{ font-family: var(--label); font-size:13px; letter-spacing:0.06em; color: var(--brass); margin-bottom:14px; }
+  .footer-col a, .footer-col span{ display:block; font-size:14.5px; margin-bottom:8px; text-decoration:none; color: var(--text-on-ink-muted); }
+  .footer-col a:hover{ color: var(--brass); }
+  .footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:12.5px; font-family: var(--label); }
+
+  @media (max-width: 900px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero{ padding: 50px 0 80px; }
+    .commercial{ grid-template-columns: 1fr; }
+    .cta-band{ grid-template-columns: 1fr; padding: 40px 24px; }
+    section{ padding: 64px 0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .route-path{ stroke-dashoffset:0; }
+    .route-pin, .route-label{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container">
+    <a href="#top" class="brand">
+      <div class="brand-mark"><img src="hay-avatar.png" alt="חי חיים אלבז"></div>
+      <div class="brand-text">
+        <span class="brand-name">חי חיים אלבז</span>
+        <span class="brand-sub">יועץ נדל״ן · אזור הקריות</span>
+      </div>
+    </a>
+    <nav>
+      <a href="#areas">אזורי פעילות</a>
+      <a href="#process">איך זה עובד</a>
+      <a href="#luxury">נכסי יוקרה</a>
+      <a href="#commercial">מסחרי</a>
+      <a href="#contact">יצירת קשר</a>
+    </nav>
+    <div class="header-actions">
+      <a class="icon-btn" href="tel:0544626165" aria-label="התקשרו עכשיו">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.65 2.65a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.43-1.22a2 2 0 012.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0122 16.92z"/></svg>
+      </a>
+      <a class="icon-btn wa-quick" data-msg="היי חי, ראיתי את האתר ואשמח לשוחח" href="#" target="_blank" rel="noopener" aria-label="שליחת הודעה בוואטסאפ" style="border-color:#25D366; color:#25D366;">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <svg class="route-svg" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path id="routePath" class="route-path" d="M90,300 C150,320 190,340 230,340 C300,340 350,280 400,260 C460,235 500,215 560,200 C620,185 660,220 700,260"></path>
+      <!-- pins -->
+      <g class="pin" data-delay="0.15">
+        <circle class="route-pin" cx="90" cy="300" r="6" fill="#C6A15B"></circle>
+        <text class="route-label" x="90" y="326" text-anchor="middle">קריית חיים</text>
+      </g>
+      <g class="pin" data-delay="0.55">
+        <circle class="route-pin" cx="230" cy="340" r="5" fill="#C6A15B"></circle>
+        <text class="route-label" x="230" y="366" text-anchor="middle">קריית ים</text>
+      </g>
+      <g class="pin" data-delay="0.95">
+        <circle class="route-pin" cx="400" cy="260" r="5" fill="#C6A15B"></circle>
+        <text class="route-label" x="400" y="247" text-anchor="middle">קריית ביאליק</text>
+      </g>
+      <g class="pin" data-delay="1.35">
+        <circle class="route-pin" cx="560" cy="200" r="5" fill="#C6A15B"></circle>
+        <text class="route-label" x="560" y="187" text-anchor="middle">קריית מוצקין</text>
+      </g>
+      <g class="pin" data-delay="1.75">
+        <circle class="route-pin" cx="700" cy="260" r="6" fill="#C6A15B"></circle>
+        <text class="route-label" x="700" y="286" text-anchor="middle">קריית אתא</text>
+      </g>
+      </g>
+    </svg>
+
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-byline">
+          <img src="hay-avatar.png" alt="חי חיים אלבז">
+          <div>
+            <span class="name">חי חיים אלבז</span>
+            <span class="role">יועץ נדל״ן · אזור הקריות</span>
+          </div>
+        </div>
+        <p class="eyebrow">ליווי מוכרים, קונים ומשקיעים · אזור הקריות והסביבה</p>
+        <h1>כשמדובר בנכס שלך — <em>לא מתפשרים.</em></h1>
+        <p class="lead">מוכרים נכס, מחפשים את הבית הבא או בוחנים השקעה באזור הקריות? ליווי אישי, שקוף ומתועד מהפגישה הראשונה ועד החתימה — כשאתם, ורק אתם, במרכז.</p>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a href="#lead" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M13 5l7 7-7 7"/></svg>
+            בואו נדבר על הנכס שלכם
+          </a>
+          <a href="tel:0544626165" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.65 2.65a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.43-1.22a2 2 0 012.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0122 16.92z"/></svg>
+            054-4626165
+          </a>
+        </div>
+      </div>
+
+      <div class="lead-card" id="lead">
+        <h3>נחזור אליכם באופן אישי</h3>
+        <p class="hint">שם, טלפון — וחוזרים אליכם עם ליווי אמיתי, לא תור אוטומטי.</p>
+        <form id="leadForm">
+          <div class="field">
+            <label for="name">שם מלא</label>
+            <input id="name" type="text" placeholder="איך קוראים לך?" required>
+          </div>
+          <div class="field">
+            <label for="phone">טלפון</label>
+            <input id="phone" type="tel" placeholder="05X-XXXXXXX" required>
+          </div>
+          <div class="field">
+            <label for="interest">מה מעניין אותך?</label>
+            <select id="interest">
+              <option>מכירת נכס</option>
+              <option>הערכת שווי בלבד</option>
+              <option>נכס מסחרי / השקעה</option>
+              <option>קניית נכס</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+            שליחה ב-WhatsApp
+          </button>
+        </form>
+        <p class="lead-note">ללא התחייבות · מענה אישי, סיכום כתוב לכל שיחה</p>
+        <div class="trust-badges">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>מענה מיידי</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>ייעוץ ראשוני ללא עלות</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>סודיות מלאה</span>
+        </div>
+        <p class="form-msg" id="formMsg"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SPECIALIZATIONS ================= -->
+  <section class="section-paper">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">תחומי התמחות</p>
+        <h2>מלווה אתכם בכל סוג עסקה</h2>
+        <p>מדירת מגורים ראשונה ועד נכס מניב — אותה רמת ליווי, אותה קפדנות.</p>
+      </div>
+      <div class="chip-grid reveal">
+        <div class="chip"><span class="num">01</span><span class="txt">מכירת דירות ובתים פרטיים</span></div>
+        <div class="chip"><span class="num">02</span><span class="txt">נכסים מסחריים ומשרדים</span></div>
+        <div class="chip"><span class="num">03</span><span class="txt">ליווי משקיעים</span></div>
+        <div class="chip"><span class="num">04</span><span class="txt">איתור עסקאות מתחת למחיר השוק</span></div>
+        <div class="chip"><span class="num">05</span><span class="txt">נכסים בפינוי־בינוי והתחדשות עירונית</span></div>
+        <div class="chip"><span class="num">06</span><span class="txt">הערכת שווי נכסים</span></div>
+        <div class="chip"><span class="num">07</span><span class="txt">בניית אסטרטגיית שיווק אישית לכל נכס</span></div>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a class="inline-wa wa-quick" data-msg="היי חי, ראיתי את תחומי ההתמחות באתר ואשמח לשוחח" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          דברו איתי עכשיו בוואטסאפ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VALUES ================= -->
+  <section class="section-ink">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">למה איתי</p>
+        <h2>שירות שנבנה סביב אמון</h2>
+      </div>
+      <div class="value-grid reveal">
+        <div class="value-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"/></svg>
+          <h3>אמינות מעל הכל</h3>
+          <p>שקיפות מלאה בכל שלב — בלי הבטחות סרק ובלי הפתעות באמצע הדרך.</p>
+        </div>
+        <div class="value-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19h16M6 15l4-5 3 3 5-7"/></svg>
+          <h3>ייצוג מלא של האינטרס שלך</h3>
+          <p>אני מנהל את המשא ומתן בעצמי, מהצד שלכם בלבד — עד הסגירה הטובה ביותר.</p>
+        </div>
+        <div class="value-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>זמינות גבוהה</h3>
+          <p>עדכונים שוטפים, מענה אישי וסיכום כתוב אחרי כל שיחה — כדי שתמיד תדעו איפה אתם עומדים.</p>
+        </div>
+        <div class="value-card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12c2-4 6-6 9-6s7 2 9 6c-2 4-6 6-9 6s-7-2-9-6z"/><circle cx="12" cy="12" r="2.4"/></svg>
+          <h3>חשיפה רחבה, לא רק ברשימה שלי</h3>
+          <p>שיתוף פעולה עם כלל משרדי התיווך באזור — כדי למקסם את מחיר המכירה ולקצר את זמן השיווק.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a class="inline-wa wa-quick" data-msg="היי חי, קראתי על הגישה שלך ואשמח לשמוע עוד" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          דברו איתי עכשיו בוואטסאפ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AREAS / MAP ================= -->
+  <section class="section-paper" id="areas">
+    <div class="container">
+      <div class="section-head center reveal" style="margin-left:auto; margin-right:auto;">
+        <p class="eyebrow" style="justify-content:center;">אזורי פעילות</p>
+        <h2>הבית שלי הוא הקריות</h2>
+        <p>פועל וזמין בכל אזור הקריות והסביבה — עם היכרות מעמיקה של כל שכונה, כל רחוב וכל שוק מקומי.</p>
+      </div>
+      <div class="map-wrap reveal">
+        <svg class="map-svg" viewBox="0 0 800 380" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <path fill="none" stroke="#C6A15B" stroke-width="2" opacity="0.55" d="M90,270 C150,290 190,310 230,310 C300,310 350,250 400,230 C460,205 500,185 560,170 C620,155 660,190 700,230"></path>
+          <g fill="#C6A15B">
+            <circle cx="90" cy="270" r="7"></circle>
+            <circle cx="230" cy="310" r="5.5"></circle>
+            <circle cx="400" cy="230" r="5.5"></circle>
+            <circle cx="560" cy="170" r="5.5"></circle>
+            <circle cx="700" cy="230" r="7"></circle>
+          </g>
+          <g fill="#E7E2D3" font-family="Heebo, sans-serif" font-size="14" text-anchor="middle">
+            <text x="90" y="296">קריית חיים</text>
+            <text x="230" y="336">קריית ים</text>
+            <text x="400" y="217">קריית ביאליק</text>
+            <text x="560" y="157">קריית מוצקין</text>
+            <text x="700" y="256">קריית אתא</text>
+          </g>
+        </svg>
+        <div class="area-list">
+          <span class="area-pill"><span class="dot"></span>קריית חיים</span>
+          <span class="area-pill"><span class="dot"></span>קריית ים</span>
+          <span class="area-pill"><span class="dot"></span>קריית ביאליק</span>
+          <span class="area-pill"><span class="dot"></span>קריית מוצקין</span>
+          <span class="area-pill"><span class="dot"></span>קריית אתא</span>
+          <span class="area-pill"><span class="dot"></span>והסביבה</span>
+        </div>
+        <div style="text-align:center; margin-top:30px;">
+          <a class="inline-wa wa-quick" data-msg="היי חי, מתעניין/ת באזור ואשמח לשמוע פרטים" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+            שאלו אותי על האזור שלכם
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCESS ================= -->
+  <section class="section-paper" id="process">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow" style="justify-content:center;">איך זה עובד</p>
+        <h2>תהליך מסודר, מהפגישה הראשונה ועד המפתח</h2>
+      </div>
+      <div class="process reveal">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>פגישת היכרות ואפיון צרכים</h3>
+          <p>מבינים מה חשוב לכם, בודקים את הנכס ובונים תמונה ריאלית של השוק.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>בניית אסטרטגיית שיווק אישית</h3>
+          <p>צילום מקצועי, תוכן ווידאו, ותוכנית תמחור וחשיפה שמותאמת לנכס הספציפי שלכם.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>שיווק וחשיפה רחבה</h3>
+          <p>פרסום ברשתות, מאגר קונים קיים ושיתופי פעולה עם כלל משרדי התיווך באזור.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>סינון קונים וניהול משא ומתן</h3>
+          <p>מנהל את כל הפניות בעצמי, מסנן רציניים בלבד ומנהל משא ומתן שמייצג אתכם בלבד.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <h3>חתימת חוזה ומסירת הנכס</h3>
+          <p>ליווי מלא עד לחתימה — ואחריה, עד למסירה בפועל.</p>
+        </div>
+      </div>
+      <div class="process-note reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span>לכל שלב בדרך — עדכון שוטף וסיכום כתוב, כדי שתמיד תדעו בדיוק איפה התהליך עומד.</span>
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a class="inline-wa wa-quick" data-msg="היי חי, אשמח להתחיל בתהליך" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+          רוצים להתחיל? דברו איתי בוואטסאפ
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARKETING CHANNELS ================= -->
+  <section class="section-ink">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow" style="justify-content:center;">חשיפה מקסימלית</p>
+        <h2>הנכס שלכם, בכל מקום שבו קונים מחפשים</h2>
+      </div>
+      <div class="channel-row reveal">
+        <span class="channel">WhatsApp Business</span>
+        <span class="channel">Facebook</span>
+        <span class="channel">LinkedIn</span>
+        <span class="channel">צילום מקצועי</span>
+        <span class="channel">סרטוני תוכן</span>
+        <span class="channel">מאגר קונים קיים</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CINEMATIC VIDEO ================= -->
+  <!-- להחלפת הסרטון: העלו קובץ mp4 חדש לאותה תיקייה עם קובץ ה-HTML, ועדכנו את שם הקובץ בשתי תגיות ה-source למטה (luxury-video.mp4). מומלץ 10-20 שניות בלולאה, ללא קול. -->
+  <section class="section-ink">
+    <div class="container">
+      <div class="video-frame reveal">
+        <video class="video-bg" autoplay muted loop playsinline aria-hidden="true">
+          <source src="luxury-video.mp4" type="video/mp4">
+        </video>
+        <video class="video-fg" autoplay muted loop playsinline>
+          <source src="luxury-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay">
+          <p class="eyebrow">מבט לעולם היוקרה</p>
+          <h2>נדל״ן שמדבר בשקט, ומרשים בגדול</h2>
+          <p>וילות, פנטהאוזים ונכסים ייחודיים — מוצגים ברמה שמתאימה להם.</p>
+          <a class="btn btn-primary wa-quick" data-msg="היי חי, אשמח לשמוע פרטים על נכסי היוקרה" href="#" target="_blank" rel="noopener">
+            דברו איתי על נכס יוקרה
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LUXURY DIVISION ================= -->
+  <section class="section-ink" id="luxury">
+    <div class="container">
+      <div class="commercial luxury-band reveal">
+        <div>
+          <p class="eyebrow">מחלקה ייעודית</p>
+          <h3>מחלקת נכסי יוקרה</h3>
+          <p>וילות, פנטהאוזים ונכסים ייחודיים — שיווק דיסקרטי, רשת קונים פרטית והצגה ברמה שהנכס שלכם ראוי לה.</p>
+          <div class="commercial-tags">
+            <span>וילות</span><span>פנטהאוזים</span><span>נכסים ייחודיים</span><span>דיסקרטיות מלאה</span>
+          </div>
+        </div>
+        <a class="btn btn-primary wa-quick" data-msg="היי חי, יש לי נכס יוקרה ואשמח לשמוע פרטים על המחלקה הייעודית" href="#" target="_blank" rel="noopener" style="white-space:nowrap;">דברו איתי על נכס היוקרה</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INHERITED / ESTATE PROPERTIES ================= -->
+  <section class="section-paper" id="inheritance">
+    <div class="container">
+      <div class="commercial inheritance-band reveal">
+        <div>
+          <p class="eyebrow">ליווי רגיש</p>
+          <h3>טיפול בנכסי יורשים ועיזבון</h3>
+          <p>ליווי מקצועי ורגיש מול כלל היורשים — תיאום ציפיות, טיפול בירושה משותפת ותהליך מכירה שקוף וברור לכולם.</p>
+        </div>
+        <a class="btn btn-primary wa-quick" data-msg="היי חי, יש לי נכס בירושה ואשמח לייעוץ ראשוני" href="#" target="_blank" rel="noopener" style="white-space:nowrap;">קבלו ייעוץ ראשוני</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMMERCIAL ================= -->
+  <section class="section-paper" id="commercial">
+    <div class="container">
+      <div class="commercial reveal">
+        <div>
+          <p class="eyebrow">גם נדל״ן מסחרי</p>
+          <h3>בעלי נכס מסחרי או משקיעים? אני כאן גם בשבילכם</h3>
+          <p>ניתוח תשואה, ליווי משקיעים ושיווק ממוקד לנכסים מניבים.</p>
+          <div class="commercial-tags">
+            <span>חנויות</span><span>משרדים</span><span>מרכזים מסחריים</span><span>השקעות מניבות</span><span>ניתוח תשואה</span>
+          </div>
+        </div>
+        <a class="btn btn-primary wa-quick" data-msg="היי חי, יש לי נכס מסחרי / השקעה ואשמח לפרטים" href="#" target="_blank" rel="noopener" style="white-space:nowrap;">דברו איתי על הנכס</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS PLACEHOLDER ================= -->
+  <section class="section-ink" id="testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow" style="justify-content:center;">לקוחות מספרים</p>
+        <h2>המקום שלכם להמלצות אמיתיות</h2>
+        <p>שלושת המשבצות למטה מוכנות למילוי — מומלץ להחליף בציטוטים אמיתיים מלקוחות לפני פרסום.</p>
+      </div>
+      <div class="test-grid reveal">
+        <div class="test-slot">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v6H8c0 2-1 3-3 3v2c4 0 6-2 6-5V5H7v2zm10 0h4v6h-3c0 2-1 3-3 3v2c4 0 6-2 6-5V5h-4v2z"/></svg>
+          <span>המלצה תתווסף כאן</span>
+          <span class="small">שם הלקוח · סוג העסקה</span>
+        </div>
+        <div class="test-slot">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v6H8c0 2-1 3-3 3v2c4 0 6-2 6-5V5H7v2zm10 0h4v6h-3c0 2-1 3-3 3v2c4 0 6-2 6-5V5h-4v2z"/></svg>
+          <span>המלצה תתווסף כאן</span>
+          <span class="small">שם הלקוח · סוג העסקה</span>
+        </div>
+        <div class="test-slot">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 7h4v6H8c0 2-1 3-3 3v2c4 0 6-2 6-5V5H7v2zm10 0h4v6h-3c0 2-1 3-3 3v2c4 0 6-2 6-5V5h-4v2z"/></svg>
+          <span>המלצה תתווסף כאן</span>
+          <span class="small">שם הלקוח · סוג העסקה</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="section-paper" id="contact">
+    <div class="container">
+      <div class="cta-band reveal">
+        <div>
+          <p class="eyebrow">בואו נתחיל</p>
+          <h2>מוכרים, קונים או משקיעים באזור הקריות והסביבה?</h2>
+          <p>השאירו פרטים ונחזור אליכם באופן אישי ומיידי — לא הודעה אוטומטית.</p>
+        </div>
+        <div class="lead-card">
+          <h3>יצירת קשר מהירה</h3>
+          <p class="hint">שם וטלפון — וזהו.</p>
+          <form id="leadForm2">
+            <div class="field">
+              <label for="name2">שם מלא</label>
+              <input id="name2" type="text" placeholder="איך קוראים לך?" required>
+            </div>
+            <div class="field">
+              <label for="phone2">טלפון</label>
+              <input id="phone2" type="tel" placeholder="05X-XXXXXXX" required>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+              שליחה ב-WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOCIAL FOLLOW ================= -->
+  <section class="section-ink" id="social">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow" style="justify-content:center;">עקבו אחריי</p>
+        <h2>תוכן, נכסים ועדכונים — ברשתות החברתיות</h2>
+      </div>
+      <div class="channel-row reveal" style="gap:16px;">
+        <a class="channel" href="https://www.facebook.com/share/r/1JGh4CJANM/?mibextid=wwXIfr" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+          פייסבוק
+        </a>
+        <a class="channel" href="https://www.instagram.com/reel/DYPxjO2uR8-/?igsh=dDU2Z2R4eGdhaXd6" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2c2.7 0 3.1 0 4.1.06 1.1.05 1.8.2 2.4.45.7.27 1.2.6 1.7 1.1.5.5.9 1 1.1 1.7.24.6.4 1.3.45 2.4.05 1 .06 1.4.06 4.1s0 3.1-.06 4.1c-.05 1.1-.2 1.8-.45 2.4-.27.7-.6 1.2-1.1 1.7-.5.5-1 .9-1.7 1.1-.6.24-1.3.4-2.4.45-1 .05-1.4.06-4.1.06s-3.1 0-4.1-.06c-1.1-.05-1.8-.2-2.4-.45a4.6 4.6 0 01-1.7-1.1 4.6 4.6 0 01-1.1-1.7c-.24-.6-.4-1.3-.45-2.4C2 15.1 2 14.7 2 12s0-3.1.06-4.1c.05-1.1.2-1.8.45-2.4.27-.7.6-1.2 1.1-1.7.5-.5 1-.9 1.7-1.1.6-.24 1.3-.4 2.4-.45C8.9 2 9.3 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zm5.2-8.4a1.2 1.2 0 100-2.4 1.2 1.2 0 000 2.4z"/></svg>
+          אינסטגרם
+        </a>
+        <a class="channel" href="https://vt.tiktok.com/ZS9Ekkfu8/" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:8px; text-decoration:none;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M16.6 5.8a4.3 4.3 0 01-3-3.8h-3v13.4a2.6 2.6 0 11-1.8-2.5V9.6a5.9 5.9 0 105.9 5.9v-6.6a7.3 7.3 0 004 1.2V7a4.3 4.3 0 01-2.1-1.2z"/></svg>
+          טיקטוק
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>חי חיים אלבז</h4>
+        <span>יועץ נדל״ן</span>
+        <span>נכסים פרטיים ומסחריים</span>
+      </div>
+      <div class="footer-col">
+        <h4>אזורי פעילות</h4>
+        <span>קריית חיים · קריית ים · קריית ביאליק</span>
+        <span>קריית מוצקין · קריית אתא · והסביבה</span>
+      </div>
+      <div class="footer-col">
+        <h4>יצירת קשר</h4>
+        <a href="tel:0544626165">טלפון: 054-4626165</a>
+        <a href="mailto:elbazhay7@gmail.com">אימייל: elbazhay7@gmail.com</a>
+        <a href="https://wa.me/972544626165" target="_blank" rel="noopener">WhatsApp ישיר</a>
+      </div>
+      <div class="footer-col">
+        <h4>עקבו אחריי</h4>
+        <a href="https://www.facebook.com/share/r/1JGh4CJANM/?mibextid=wwXIfr" target="_blank" rel="noopener">פייסבוק</a>
+        <a href="https://www.instagram.com/reel/DYPxjO2uR8-/?igsh=dDU2Z2R4eGdhaXd6" target="_blank" rel="noopener">אינסטגרם</a>
+        <a href="https://vt.tiktok.com/ZS9Ekkfu8/" target="_blank" rel="noopener">טיקטוק</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> חי חיים אלבז</span>
+      <span>נבנה בגאווה עבור לקוחות אזור הקריות</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:0544626165" class="mobile-bar-btn call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.8 19.8 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.34 1.79.65 2.65a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.43-1.22a2 2 0 012.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0122 16.92z"/></svg>
+    התקשרו
+  </a>
+  <a class="mobile-bar-btn wa wa-quick" data-msg="היי חי, ראיתי את האתר ואשמח לשוחח" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5C8.5 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .9.9-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
+    וואטסאפ
+  </a>
+</div>
+
+<script>
+  // header solid on scroll
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('solid', window.scrollY > 40);
+  });
+
+  // hero route animation on load
+  window.addEventListener('load', () => {
+    document.getElementById('routePath').classList.add('animate');
+    document.querySelectorAll('.pin').forEach(g => {
+      const delay = g.getAttribute('data-delay');
+      g.querySelector('.route-pin').style.animationDelay = delay + 's';
+      g.querySelector('.route-label').style.animationDelay = (parseFloat(delay) + 0.15) + 's';
+      g.querySelector('.route-pin').classList.add('animate');
+      g.querySelector('.route-label').classList.add('animate');
+    });
+  });
+
+  // scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => io.observe(el));
+
+  // form -> WhatsApp deep link
+  const WA_NUMBER = "972544626165";
+
+  // populate every quick-contact WhatsApp button across the site
+  document.querySelectorAll('.wa-quick').forEach(el => {
+    const msg = el.getAttribute('data-msg') || 'היי חי, ראיתי את האתר ואשמח לקבל פרטים';
+    el.setAttribute('href', `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`);
+  });
+
+  function handleLead(formId, msgEl){
+    const form = document.getElementById(formId);
+    if(!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('input[type="text"]').value.trim();
+      const phone = form.querySelector('input[type="tel"]').value.trim();
+      const interestField = form.querySelector('select');
+      const interest = interestField ? interestField.value : '';
+      let text = `היי חי, שמי ${name}, הטלפון שלי ${phone}.`;
+      if(interest) text += ` מתעניין/ת ב: ${interest}.`;
+      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+      if(msgEl){
+        const el = document.getElementById(msgEl);
+        el.textContent = "נפתח WhatsApp עם ההודעה שלך — נשאר רק לשלוח.";
+        el.classList.add('show');
+      }
+    });
+  }
+  handleLead('leadForm', 'formMsg');
+  handleLead('leadForm2', null);
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
